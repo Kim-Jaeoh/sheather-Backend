@@ -1,0 +1,213 @@
+{
+  "feed": [
+    {
+      "id": "1",
+      "url": ["/image/test1.jpeg"],
+      "imgAspect": "3/4",
+      "displayName": "ynxx.k",
+      "email": "ynxx@test.com",
+      "createdAt": 1675732653000,
+      "like": [
+        {
+          "displayName": "jjaongs",
+          "postId": "1",
+          "time": 1675732653020
+        },
+
+        {
+          "displayName": "5dong2",
+          "postId": "1",
+          "time": 1675732653040
+        }
+      ],
+      "text": "아침 출근 길은 쪼금 춥네영ㅎㅎ!",
+      "feel": "😬 조금 추워요",
+      "wearInfo": {
+        "outer": "코트",
+        "top": "긴팔",
+        "innerTop": "",
+        "bottom": "긴 바지",
+        "etc": "털모자"
+      },
+      "weatherInfo": {
+        "temp": "4",
+        "wind": "4",
+        "weatherIcon": "02d",
+        "weather": "약간의 구름이 낀 하늘"
+      },
+      "region": "서울",
+      "reply": [],
+      "tag": []
+    },
+    {
+      "id": "2",
+      "url": ["/image/test2.jpeg"],
+      "imgAspect": "1/1",
+      "displayName": "5dong2",
+      "email": "5dong2@test.com",
+      "createdAt": 1675696653000,
+      "like": [
+        {
+          "displayName": "ynxx.k",
+          "postId": "2",
+          "time": 1675732653020
+        }
+      ],
+      "text": "날 풀린 거 같으면서도 살짝 쌀쌀쓰~~!",
+      "feel": "😬 조금 추워요",
+      "wearInfo": {
+        "outer": "패딩",
+        "top": "긴팔",
+        "innerTop": "",
+        "bottom": "긴 바지",
+        "etc": ""
+      },
+      "weatherInfo": {
+        "temp": -3,
+        "wind": 2,
+        "weatherIcon": "01n",
+        "weather": "맑음"
+      },
+      "region": "서울",
+      "reply": [],
+      "tag": []
+    },
+    {
+      "id": "3",
+      "url": ["/image/test3.jpeg"],
+      "imgAspect": "3/4",
+      "displayName": "d2_b_",
+      "email": "d2b@test.com",
+      "createdAt": 1675697998000,
+      "like": [
+        {
+          "displayName": "5dong2",
+          "postId": "3",
+          "time": 1675732653020
+        },
+
+        {
+          "displayName": "jjaongs",
+          "postId": "3",
+          "time": 1675732653040
+        }
+      ],
+      "text": "날 점점 풀리는 거 같아서 기분 쏘 뀼!",
+      "feel": "😄 적당해요",
+      "wearInfo": {
+        "outer": "자켓",
+        "top": "긴팔",
+        "innerTop": "",
+        "bottom": "긴 바지",
+        "etc": ""
+      },
+      "weatherInfo": {
+        "temp": 16,
+        "wind": 4,
+        "weatherIcon": "01n",
+        "weather": "맑음"
+      },
+      "region": "서울",
+      "reply": [],
+      "tag": []
+    },
+    {
+      "id": "4",
+      "url": ["/image/test4.jpeg"],
+      "imgAspect": "3/4",
+      "displayName": "dam",
+      "email": "dam@test.com",
+      "createdAt": 1675703853000,
+      "like": [],
+      "text": "지금 그리 안 추워서 딱 적당한듯!!",
+      "feel": "😄 적당해요",
+      "wearInfo": {
+        "outer": "가죽 자켓",
+        "top": "긴팔",
+        "innerTop": "",
+        "bottom": "청바지",
+        "etc": ""
+      },
+      "weatherInfo": {
+        "temp": 1,
+        "wind": 2,
+        "weatherIcon": "04d",
+        "weather": "온흐림"
+      },
+      "region": "서울",
+      "reply": [],
+      "tag": ["damm"]
+    },
+    {
+      "id": "5",
+      "url": ["/image/test5.jpeg"],
+      "imgAspect": "1/1",
+      "displayName": "hongjo_ov",
+      "email": "hongjo@test.com",
+      "createdAt": 1675747053000,
+      "like": [
+        {
+          "displayName": "jjaongs",
+          "postId": "5",
+          "time": 1675732653020
+        },
+        {
+          "displayName": "5dong2",
+          "postId": "5",
+          "time": 1675732653040
+        }
+      ],
+      "text": "반차 쓴 날! 기분도 좋고 날도 조하~",
+      "feel": "😄 적당해요",
+      "wearInfo": {
+        "outer": "자켓",
+        "top": "셔츠",
+        "innerTop": "",
+        "bottom": "긴 치마",
+        "etc": ""
+      },
+      "weatherInfo": {
+        "temp": 5,
+        "wind": 2,
+        "weatherIcon": "03d",
+        "weather": "구름조금"
+      },
+      "region": "서울",
+      "reply": [],
+      "tag": ["뭐노노", "dam"]
+    },
+    {
+      "id": "6",
+      "url": ["/image/test6.jpeg"],
+      "imgAspect": "3/4",
+      "displayName": "jjaongs",
+      "email": "jjaongs@test.com",
+      "createdAt": 1675750653000,
+      "like": [
+        {
+          "displayName": "5dong2",
+          "postId": "6",
+          "time": 1675732653020
+        }
+      ],
+      "text": "낮에는 날씨가 좋아여!!",
+      "feel": "😥 조금 더워요",
+      "wearInfo": {
+        "outer": "",
+        "top": "맨투맨",
+        "innerTop": "긴팔",
+        "bottom": "긴 바지",
+        "etc": ""
+      },
+      "weatherInfo": {
+        "temp": 4,
+        "wind": 2,
+        "weatherIcon": "04n",
+        "weather": "튼구름"
+      },
+      "region": "서울",
+      "reply": [],
+      "tag": ["뭐노", "dam"]
+    }
+  ]
+}
