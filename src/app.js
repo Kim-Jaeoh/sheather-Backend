@@ -18,4 +18,4 @@ app.get("/", (req, res) => {
 });
 
 // http listen port 생성 서버 실행
-app.listen(PORT, () => console.log("hello)"));
+app.listen(4000, () => console.log("hello)"));
