@@ -4,8 +4,8 @@ import admin from "firebase-admin";
 // import serviceAccount from "../../serviceAccountKey.json" assert { type: "json" };
 
 const jsonFile = fs.readFileSync("./src/data/data.json", "utf8"); // json 파일 읽기
-const serviceAccountFile = fs.readFileSync("./serviceAccountKey.json", "utf8"); // json 파일 읽기
 const jsonData = JSON.parse(jsonFile);
+const serviceAccountFile = fs.readFileSync("./serviceAccountKey.json", "utf8"); // json 파일 읽기
 const serviceAccount = JSON.parse(serviceAccountFile);
 const router = express.Router();
 

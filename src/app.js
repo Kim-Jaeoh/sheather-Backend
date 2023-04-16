@@ -1,13 +1,14 @@
 import express from "express";
 import cors from "cors";
+import bodyParser from "body-parser";
 import feed from "./routes/feed.js";
 import info from "./routes/info.js";
 
 //express 사용
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: "100mb" }));
-app.use(express.urlencoded({ limit: "100mb", extended: true }));
+app.use(bodyParser.json({ limit: "100mb" }));
+app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
 const PORT = process.env.port || 4000;
 
 app.use("/", feed);
