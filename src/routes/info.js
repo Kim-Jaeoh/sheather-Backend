@@ -2,6 +2,7 @@ import express from "express";
 import fs from "fs";
 import admin from "firebase-admin";
 import dotenv from "dotenv"; // dotenv 모듈 import
+import { applicationDefault } from "firebase-admin/app";
 dotenv.config(); // .env 파일 로드
 
 // json 파일 읽기
@@ -12,12 +13,13 @@ const serviceAccount = JSON.parse(
 const router = express.Router();
 
 admin.initializeApp({
-  credential: admin.credential.cert({
-    projectId: process.env.FB_PROJECT_ID,
-    private_key: process.env.FB_PRIVATE_KEY,
-    client_email: process.env.FB_CLIENT_EMAIL,
-  }),
+  // credential: admin.credential.cert({
+  //   projectId: process.env.FB_PROJECT_ID,
+  //   private_key: process.env.FB_PRIVATE_KEY,
+  //   client_email: process.env.FB_CLIENT_EMAIL,
+  // }),
   // credential: admin.credential.cert(serviceAccount),
+  credential: applicationDefault(),
   databaseURL: "https://sheather-458bd-default-rtdb.firebaseio.com",
 });
 
