@@ -7,17 +7,12 @@ dotenv.config(); // .env 파일 로드
 // json 파일 읽기
 const jsonData = JSON.parse(fs.readFileSync("./src/data/data.json", "utf8"));
 const serviceAccount = JSON.parse(
-  fs.readFileSync(process.env.GOOGLE_CREDS, "utf8")
+  fs.readFileSync(process.env.FB_SERVICE_ACCOUNT_KEY_PATH, "utf8")
 );
 const router = express.Router();
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  // credential: admin.credential.cert({
-  //   projectId: process.env.FB_PROJECT_ID,
-  //   private_key: process.env.FB_PRIVATE_KEY,
-  //   client_email: process.env.FB_CLIENT_EMAIL,
-  // }),
   databaseURL: "https://sheather-458bd-default-rtdb.firebaseio.com",
 });
 
