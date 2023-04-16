@@ -2,7 +2,6 @@ import express from "express";
 import fs from "fs";
 import admin from "firebase-admin";
 import dotenv from "dotenv"; // dotenv 모듈 import
-import { applicationDefault } from "firebase-admin/app";
 dotenv.config(); // .env 파일 로드
 
 // json 파일 읽기
@@ -18,7 +17,6 @@ admin.initializeApp({
     private_key: process.env.FB_PRIVATE_KEY,
     client_email: process.env.FB_CLIENT_EMAIL,
   }),
-  // credential: applicationDefault(),
   // credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://sheather-458bd-default-rtdb.firebaseio.com",
 });
