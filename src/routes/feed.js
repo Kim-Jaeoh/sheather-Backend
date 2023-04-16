@@ -1,8 +1,7 @@
 import express from "express";
 import fs from "fs";
 
-const jsonFile = fs.readFileSync("./src/data/data.json", "utf8"); // json 파일 읽기
-const jsonData = JSON.parse(jsonFile);
+const jsonData = JSON.parse(fs.readFileSync("./src/data/data.json", "utf8")); // json 파일 읽기
 const router = express.Router();
 
 //// GET

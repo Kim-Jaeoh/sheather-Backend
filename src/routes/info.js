@@ -1,12 +1,13 @@
 import express from "express";
 import fs from "fs";
 import admin from "firebase-admin";
-// import serviceAccount from "../../serviceAccountKey.json" assert { type: "json" };
+import dotenv from "dotenv"; // dotenv 모듈 import
+dotenv.config(); // .env 파일 로드
 
-const jsonFile = fs.readFileSync("./src/data/data.json", "utf8"); // json 파일 읽기
-const jsonData = JSON.parse(jsonFile);
-const serviceAccountFile = fs.readFileSync("./serviceAccountKey.json", "utf8"); // json 파일 읽기
-const serviceAccount = JSON.parse(serviceAccountFile);
+const jsonData = JSON.parse(fs.readFileSync("./src/data/data.json", "utf8")); // json 파일 읽기
+const serviceAccount = JSON.parse(
+  fs.readFileSync(process.env.FB_SERVICE_ACCOUNT_KEY_PATH, "utf8")
+);
 const router = express.Router();
 
 admin.initializeApp({
