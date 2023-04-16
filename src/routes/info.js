@@ -13,13 +13,13 @@ const serviceAccount = JSON.parse(
 const router = express.Router();
 
 admin.initializeApp({
-  // credential: admin.credential.cert({
-  //   projectId: process.env.FB_PROJECT_ID,
-  //   private_key: process.env.FB_PRIVATE_KEY,
-  //   client_email: process.env.FB_CLIENT_EMAIL,
-  // }),
+  credential: admin.credential.cert({
+    projectId: process.env.FB_PROJECT_ID,
+    private_key: process.env.FB_PRIVATE_KEY,
+    client_email: process.env.FB_CLIENT_EMAIL,
+  }),
   // credential: applicationDefault(),
-  credential: admin.credential.cert(serviceAccount),
+  // credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://sheather-458bd-default-rtdb.firebaseio.com",
 });
 
