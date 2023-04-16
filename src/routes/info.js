@@ -13,9 +13,9 @@ const router = express.Router();
 
 admin.initializeApp({
   credential: admin.credential.cert({
-    projectId: process.env.FB_PROJECT_ID,
-    private_key: process.env.FB_PRIVATE_KEY,
-    client_email: process.env.FB_CLIENT_EMAIL,
+    projectId: process.env.FB_PROJECT_ID.replace(/\\n/g, "\n"),
+    private_key: process.env.FB_PRIVATE_KEY.replace(/\\n/g, "\n"),
+    client_email: process.env.FB_CLIENT_EMAIL.replace(/\\n/g, "\n"),
   }),
   // credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://sheather-458bd-default-rtdb.firebaseio.com",
