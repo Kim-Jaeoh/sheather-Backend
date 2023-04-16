@@ -4,7 +4,8 @@ import admin from "firebase-admin";
 import dotenv from "dotenv"; // dotenv 모듈 import
 dotenv.config(); // .env 파일 로드
 
-const jsonData = JSON.parse(fs.readFileSync("./src/data/data.json", "utf8")); // json 파일 읽기
+// json 파일 읽기
+const jsonData = JSON.parse(fs.readFileSync("./src/data/data.json", "utf8"));
 const serviceAccount = JSON.parse(
   fs.readFileSync(process.env.FB_SERVICE_ACCOUNT_KEY_PATH, "utf8")
 );
