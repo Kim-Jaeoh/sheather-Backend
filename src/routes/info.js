@@ -18,8 +18,8 @@ admin.initializeApp({
   //   private_key: process.env.FB_PRIVATE_KEY,
   //   client_email: process.env.FB_CLIENT_EMAIL,
   // }),
-  // credential: admin.credential.cert(serviceAccount),
-  credential: applicationDefault(),
+  // credential: applicationDefault(),
+  credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://sheather-458bd-default-rtdb.firebaseio.com",
 });
 
