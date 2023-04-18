@@ -84,6 +84,16 @@ router.post("/api/push_send", async (req, res, next) => {
       title: "SHEATHER",
       body: message,
     },
+    android: {
+      priority: "high",
+    },
+    apns: {
+      payload: {
+        aps: {
+          contentAvailable: true,
+        },
+      },
+    },
   };
 
   admin
