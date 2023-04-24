@@ -7,7 +7,7 @@ const router = express.Router();
 //// GET
 // 피드
 router.get("/api/feed", (req, res) => {
-  res.send(jsonData.feed);
+  return res.send(jsonData.feed);
 });
 
 // 팔로잉 피드 최신 리스트
