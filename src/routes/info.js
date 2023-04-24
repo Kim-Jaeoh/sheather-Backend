@@ -59,8 +59,8 @@ router.get("/api/search", (req, res) => {
   const hashFilter = jsonData.feed.filter((data) =>
     data.tag.includes(decodeURIComponent(keyword))
   );
-  res.send(console.log(hashFilter));
-  res.send(console.log(jsonData.feed));
+  // res.send(console.log(hashFilter));
+  // res.send(console.log(jsonData.feed));
   return res.send(hashFilter.slice((page - 1) * limit, page * limit));
 });
 
