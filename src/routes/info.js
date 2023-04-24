@@ -56,12 +56,11 @@ router.get("/api/region", (req, res) => {
 // 태그 검색
 router.get("/api/search", (req, res) => {
   const { keyword, limit, page } = req.query;
-  if (keyword) {
-    const hashFilter = jsonData.feed.filter((data) =>
-      data.tag.includes(decodeURIComponent(keyword))
-    );
-    return res.send(hashFilter.slice((page - 1) * limit, page * limit));
-  }
+  const hashFilter = jsonData.feed.filter((data) =>
+    data.tag.includes(decodeURIComponent(keyword))
+  );
+  console.log(jsonData.feed);
+  return res.send(hashFilter.slice((page - 1) * limit, page * limit));
 });
 
 //// POST
