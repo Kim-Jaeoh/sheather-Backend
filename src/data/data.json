@@ -7,19 +7,7 @@
       "displayName": "ynxx.k",
       "email": "ynxx@test.com",
       "createdAt": 1675732653000,
-      "like": [
-        {
-          "displayName": "jjaongs",
-          "postId": "1",
-          "time": 1675732653020
-        },
-
-        {
-          "displayName": "5dong2",
-          "postId": "1",
-          "time": 1675732653040
-        }
-      ],
+      "like": [],
       "text": "아침 출근 길은 쪼금 춥네영ㅎㅎ!",
       "feel": "😬 조금 추워요",
       "wearInfo": {
@@ -46,13 +34,7 @@
       "displayName": "5dong2",
       "email": "5dong2@test.com",
       "createdAt": 1675696653000,
-      "like": [
-        {
-          "displayName": "ynxx.k",
-          "postId": "2",
-          "time": 1675732653020
-        }
-      ],
+      "like": [],
       "text": "날 풀린 거 같으면서도 살짝 쌀쌀쓰~~!",
       "feel": "😬 조금 추워요",
       "wearInfo": {
@@ -79,19 +61,7 @@
       "displayName": "d2_b_",
       "email": "d2b@test.com",
       "createdAt": 1675697998000,
-      "like": [
-        {
-          "displayName": "5dong2",
-          "postId": "3",
-          "time": 1675732653020
-        },
-
-        {
-          "displayName": "jjaongs",
-          "postId": "3",
-          "time": 1675732653040
-        }
-      ],
+      "like": [],
       "text": "날 점점 풀리는 거 같아서 기분 쏘 뀼!",
       "feel": "😄 적당해요",
       "wearInfo": {
@@ -145,18 +115,7 @@
       "displayName": "hongjo_ov",
       "email": "hongjo@test.com",
       "createdAt": 1675747053000,
-      "like": [
-        {
-          "displayName": "jjaongs",
-          "postId": "5",
-          "time": 1675732653020
-        },
-        {
-          "displayName": "5dong2",
-          "postId": "5",
-          "time": 1675732653040
-        }
-      ],
+      "like": [],
       "text": "반차 쓴 날! 기분도 좋고 날도 조하~",
       "feel": "😄 적당해요",
       "wearInfo": {
@@ -183,13 +142,7 @@
       "displayName": "jjaongs",
       "email": "jjaongs@test.com",
       "createdAt": 1675750653000,
-      "like": [
-        {
-          "displayName": "5dong2",
-          "postId": "6",
-          "time": 1675732653020
-        }
-      ],
+      "like": [],
       "text": "낮에는 날씨가 좋아여!!",
       "feel": "😥 조금 더워요",
       "wearInfo": {
