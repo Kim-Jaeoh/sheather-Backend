@@ -114,6 +114,42 @@ router.get("/api/feed/date", (req, res) => {
   }
   return res.send(filter.slice((page - 1) * limit, page * limit));
 });
+
+// 정보
+router.get("/api/clothes", (req, res) => {
+  const { cat, detail, limit, page } = req.query;
+  const catFilter = jsonData.feed.filter((data) => data.wearInfo[cat] !== "");
+  if (detail === "전체") {
+    return res.send(catFilter.slice((page - 1) * limit, page * limit));
+  } else {
+    const filterWear = catFilter.filter(
+      (data) => data.wearInfo[cat] === decodeURIComponent(detail)
+    );
+    return res.send(filterWear.slice((page - 1) * limit, page * limit));
+  }
+});
+
+// 날씨
+router.get("/api/weather", (req, res) => {
+  const { cat, detail, limit, page } = req.query;
+  const filterWear = jsonData.feed.filter(
+    (data) => data.weatherInfo[cat] == decodeURIComponent(detail)
+  );
+
+  return res.send(filterWear.slice((page - 1) * limit, page * limit));
+});
+
+// 지역
+router.get("/api/region", (req, res) => {
+  const { cat, detail, limit, page } = req.query;
+  const catFilter = jsonData.feed.filter((data) => data[cat] !== "");
+  const filterWear = catFilter.filter(
+    (data) => data[cat] === decodeURIComponent(detail)
+  );
+
+  return res.send(filterWear.slice((page - 1) * limit, page * limit));
+});
+
 // 태그 검색
 router.get("/api/search", (req, res) => {
   const { keyword, limit, page } = req.query;
