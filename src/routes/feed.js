@@ -47,22 +47,22 @@ router.get("/api/feed/following/date", (req, res) => {
 
   let filter;
   if (cat === "recent") {
-    filter = dayFilter
+    return (filter = dayFilter
       .filter((data) => {
         const hour = date(data.createdAt).getHours();
         return hour >= Number(min) && hour <= Number(max);
       })
-      .sort((a, b) => a.createdAt - b.createdAt);
+      .sort((a, b) => a.createdAt - b.createdAt));
   }
   if (cat === "popular") {
-    filter = dayFilter
+    return (filter = dayFilter
       .filter((data) => {
         const hour = date(data.createdAt).getHours();
         return hour >= Number(min) && hour <= Number(max);
       })
       .sort((a, b) => {
         return b.like.length - a.like.length;
-      });
+      }));
   }
   return res.send(filter.slice((page - 1) * limit, page * limit));
 });
@@ -95,22 +95,22 @@ router.get("/api/feed/date", (req, res) => {
 
   let filter;
   if (cat === "recent") {
-    filter = dayFilter
+    return (filter = dayFilter
       .filter((data) => {
         const hour = date(data.createdAt).getHours();
         return hour >= Number(min) && hour <= Number(max);
       })
-      .sort((a, b) => a.createdAt - b.createdAt);
+      .sort((a, b) => a.createdAt - b.createdAt));
   }
   if (cat === "popular") {
-    filter = dayFilter
+    return (filter = dayFilter
       .filter((data) => {
         const hour = date(data.createdAt).getHours();
         return hour >= Number(min) && hour <= Number(max);
       })
       .sort((a, b) => {
         return b.like.length - a.like.length;
-      });
+      }));
   }
   return res.send(filter.slice((page - 1) * limit, page * limit));
 });
