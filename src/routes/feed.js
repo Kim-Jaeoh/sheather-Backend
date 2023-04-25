@@ -114,6 +114,14 @@ router.get("/api/feed/date", (req, res) => {
   }
   return res.send(filter.slice((page - 1) * limit, page * limit));
 });
+// 태그 검색
+router.get("/api/search", (req, res) => {
+  const { keyword, limit, page } = req.query;
+  const hashFilter = jsonData.feed.filter((data) =>
+    data.tag.includes(decodeURIComponent(keyword))
+  );
+  return res.send(hashFilter.slice((page - 1) * limit, page * limit));
+});
 
 //// POST
 // 글 업로드

@@ -53,16 +53,14 @@ router.get("/api/region", (req, res) => {
   return res.send(filterWear.slice((page - 1) * limit, page * limit));
 });
 
-// 태그 검색
-router.get("/api/search", (req, res) => {
-  const { keyword, limit, page } = req.query;
-  const hashFilter = jsonData.feed.filter((data) =>
-    data.tag.includes(decodeURIComponent(keyword))
-  );
-  // res.send(console.log(hashFilter));
-  // res.send(console.log(jsonData.feed));
-  return res.send(hashFilter.slice((page - 1) * limit, page * limit));
-});
+// // 태그 검색
+// router.get("/api/search", (req, res) => {
+//   const { keyword, limit, page } = req.query;
+//   const hashFilter = jsonData.feed.filter((data) =>
+//     data.tag.includes(decodeURIComponent(keyword))
+//   );
+//   return res.send(hashFilter.slice((page - 1) * limit, page * limit));
+// });
 
 //// POST
 // 알림
