@@ -11,7 +11,7 @@ app.use(bodyParser.json({ limit: "100mb" }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: false }));
 
 app.use("/", feed);
-app.use("/", info);
+app.use("/info", info);
 
 app.get("/", (req, res) => {
   res.send("Hello World");
