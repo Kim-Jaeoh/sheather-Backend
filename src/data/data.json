@@ -24,7 +24,7 @@
         "weather": "약간의 구름이 낀 하늘"
       },
       "region": "서울",
-      "reply": [],
+      "comment": [],
       "tag": []
     },
     {
@@ -51,7 +51,7 @@
         "weather": "맑음"
       },
       "region": "서울",
-      "reply": [],
+      "comment": [],
       "tag": []
     },
     {
@@ -78,7 +78,7 @@
         "weather": "맑음"
       },
       "region": "서울",
-      "reply": [],
+      "comment": [],
       "tag": []
     },
     {
@@ -105,7 +105,7 @@
         "weather": "온흐림"
       },
       "region": "서울",
-      "reply": [],
+      "comment": [],
       "tag": ["damm"]
     },
     {
@@ -132,7 +132,7 @@
         "weather": "구름조금"
       },
       "region": "서울",
-      "reply": [],
+      "comment": [],
       "tag": ["뭐노노", "dam"]
     },
     {
@@ -159,7 +159,7 @@
         "weather": "튼구름"
       },
       "region": "서울",
-      "reply": [],
+      "comment": [],
       "tag": ["뭐노", "dam"]
     }
   ]
