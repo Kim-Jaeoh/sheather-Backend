@@ -207,7 +207,10 @@ router.patch("/api/reply", (req, res) => {
   const filter = jsonData.feed.filter((data) =>
     data.comment.some((com) => com.commentId === commentId)
   );
-  filter[0].comment = [...filter[0].comment, reply];
+  const filterComment = filter[0].comment.filter(
+    (com) => com.commentId === commentId
+  );
+  filterComment[0].reply.push(reply);
   return res.send("succeess");
 });
 
@@ -231,12 +234,17 @@ router.delete("/api/comment/:id", (req, res) => {
 
 // 답글 삭제
 router.delete("/api/reply/:commentId", (req, res) => {
-  const { commentId } = req.params;
-  const { reply } = req.body;
+  const { commentId, reply } = req.body;
   const filter = jsonData.feed.filter((data) =>
-    data.some((com) => com.commendId === id)
+    data.comment.some((com) => com.commentId === commentId)
   );
-  filter[0].reply = reply;
+  const filterComment = filter[0].comment.filter(
+    (com) => com.commentId === commentId
+  );
+  const filterReply = filterComment[0].reply.filter(
+    (com) => com.replyId !== reply.replyId
+  );
+  filterComment[0].reply = filterReply;
   return res.send("succeess");
 });
 

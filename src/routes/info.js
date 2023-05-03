@@ -14,7 +14,7 @@ admin.initializeApp({
     private_key: process.env.FB_PRIVATE_KEY.replace(/\\n/g, "\n"),
     client_email: process.env.FB_CLIENT_EMAIL.replace(/\\n/g, "\n"),
   }),
-  databaseURL: process.env.FB_DATABASE_URL.replace(/\\n/g, "\n"),
+  databaseURL: "https://sheather-463c7-default-rtdb.firebaseio.com",
 });
 
 //// POST
