@@ -180,16 +180,6 @@ router.post("/api/comment", (req, res) => {
   return res.send("succeess");
 });
 
-// 답글 업로드
-router.post("/api/reply", (req, res) => {
-  const { commentId, reply } = req.body;
-  const filter = jsonData.feed.filter((data) =>
-    data.comment.some((com) => com.commentId === commentId)
-  );
-  filter[0].reply = reply;
-  return res.send("succeess");
-});
-
 // 좋아요
 router.post("/api/like", (req, res) => {
   const { id, like } = req.body;
@@ -208,6 +198,16 @@ router.patch("/api/feed/:id", (req, res) => {
     return res.status(404).send("Not Found");
   }
   Object.assign(filter[0], { text, feel, wearInfo, editAt, tag });
+  return res.send("succeess");
+});
+
+// 답글 업로드
+router.patch("/api/reply", (req, res) => {
+  const { commentId, reply } = req.body;
+  const filter = jsonData.feed.filter((data) =>
+    data.comment.some((com) => com.commentId === commentId)
+  );
+  filter[0].reply = reply;
   return res.send("succeess");
 });
 
