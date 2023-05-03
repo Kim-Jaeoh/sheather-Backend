@@ -169,6 +169,7 @@ router.get("/api/search", (req, res) => {
 router.post("/api/feed", (req, res) => {
   const reqData = req.body;
   jsonData.feed.push(reqData);
+  return res.send("succeess");
 });
 
 // 댓글 업로드
@@ -176,6 +177,7 @@ router.post("/api/comment", (req, res) => {
   const { id, comment } = req.body;
   const filter = jsonData.feed.filter((data) => data.id === id);
   filter[0].comment = comment;
+  return res.send("succeess");
 });
 
 // 답글 업로드
@@ -185,6 +187,7 @@ router.post("/api/reply", (req, res) => {
     data.comment.some((com) => com.commentId === commentId)
   );
   filter[0].reply = reply;
+  return res.send("succeess");
 });
 
 // 좋아요
@@ -192,6 +195,7 @@ router.post("/api/like", (req, res) => {
   const { id, like } = req.body;
   const filter = jsonData.feed.filter((data) => data.id === id);
   filter[0].like = like;
+  return res.send("succeess");
 });
 
 //// PATCH
@@ -204,6 +208,7 @@ router.patch("/api/feed/:id", (req, res) => {
     return res.status(404).send("Not Found");
   }
   Object.assign(filter[0], { text, feel, wearInfo, editAt, tag });
+  return res.send("succeess");
 });
 
 //// DELETE
@@ -212,6 +217,7 @@ router.delete("/api/feed/:id", (req, res) => {
   const { id } = req.params;
   const filter = jsonData.feed.filter((data) => data.id !== id);
   res.send((jsonData.feed = filter));
+  return res.send("succeess");
 });
 
 // 댓글 삭제
@@ -220,6 +226,7 @@ router.delete("/api/comment/:id", (req, res) => {
   const { comment } = req.body;
   const filter = jsonData.feed.filter((data) => data.id === id);
   filter[0].comment = comment;
+  return res.send("succeess");
 });
 
 // 답글 삭제
@@ -230,6 +237,7 @@ router.delete("/api/reply/:commentId", (req, res) => {
     data.some((com) => com.commendId === id)
   );
   filter[0].reply = reply;
+  return res.send("succeess");
 });
 
 export default router;
