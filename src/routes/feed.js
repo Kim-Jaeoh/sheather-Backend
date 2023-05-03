@@ -207,7 +207,7 @@ router.patch("/api/reply", (req, res) => {
   const filter = jsonData.feed.filter((data) =>
     data.comment.some((com) => com.commentId === commentId)
   );
-  filter[0].reply = reply;
+  filter[0].comment = [...filter[0].comment, reply];
   return res.send("succeess");
 });
 
