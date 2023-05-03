@@ -178,6 +178,15 @@ router.post("/api/comment", (req, res) => {
   return (filter[0].comment = comment);
 });
 
+// 답글 업로드
+router.post("/api/reply", (req, res) => {
+  const { commentId, reply } = req.body;
+  const filter = jsonData.feed.filter((data) =>
+    data.comment.some((com) => com.commentId === commentId)
+  );
+  return (filter[0].reply = reply);
+});
+
 // 좋아요
 router.post("/api/like", (req, res) => {
   const { id, like } = req.body;
@@ -211,6 +220,16 @@ router.delete("/api/comment/:id", (req, res) => {
   const { comment } = req.body;
   const filter = jsonData.feed.filter((data) => data.id === id);
   return (filter[0].comment = comment);
+});
+
+// 답글 삭제
+router.delete("/api/reply/:commentId", (req, res) => {
+  const { commentId } = req.params;
+  const { reply } = req.body;
+  const filter = jsonData.feed.filter((data) =>
+    data.some((com) => com.commendId === id)
+  );
+  return (filter[0].reply = reply);
 });
 
 export default router;
