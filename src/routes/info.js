@@ -10,7 +10,7 @@ const router = express.Router();
 
 admin.initializeApp({
   credential: admin.credential.cert({
-    projectId: process.env.FB_PROJECT_ID.replace(/\\n/g, "\n"),
+    project_id: process.env.FB_PROJECT_ID.replace(/\\n/g, "\n"),
     private_key: process.env.FB_PRIVATE_KEY.replace(/\\n/g, "\n"),
     client_email: process.env.FB_CLIENT_EMAIL.replace(/\\n/g, "\n"),
   }),
