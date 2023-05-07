@@ -14,12 +14,12 @@ admin.initializeApp({
     private_key: process.env.FB_PRIVATE_KEY.replace(/\\n/g, "\n"),
     client_email: process.env.FB_CLIENT_EMAIL.replace(/\\n/g, "\n"),
   }),
-  databaseURL: "https://sheather-463c7-default-rtdb.firebaseio.com",
+  databaseURL: process.env.FB_DATABASE_URL,
 });
 
 //// POST
 // 알림
-router.post("/api/push_send", async (req, res, next) => {
+router.post("/api/push_send", (req, res, next) => {
   const {
     data: { message, token },
   } = req.body;
