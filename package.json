@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "proxy": "https://port-0-sheather-backend-17xqnr2alghu5xr5.sel3.cloudtype.app",
+  "proxy": "https://sheather.netlify.app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js"
