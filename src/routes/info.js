@@ -21,7 +21,7 @@ admin.initializeApp({
 // 알림
 router.post("/api/push_send", (req, res, next) => {
   const {
-    data: { message, token },
+    data: { message, token, link },
   } = req.body;
 
   let payload = {
@@ -29,6 +29,11 @@ router.post("/api/push_send", (req, res, next) => {
     notification: {
       title: "SHEATHER",
       body: message,
+    },
+    webpush: {
+      fcmOptions: {
+        link: link,
+      },
     },
     android: {
       priority: "high",
