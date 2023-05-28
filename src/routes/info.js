@@ -19,7 +19,7 @@ admin.initializeApp({
 
 //// POST
 // 알림
-router.post("/api/push_send", (req, res, next) => {
+router.post("/api/push-send", (req, res, next) => {
   const {
     data: { message, token, link },
   } = req.body;

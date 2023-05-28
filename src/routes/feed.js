@@ -176,7 +176,20 @@ router.post("/api/feed", (req, res) => {
 router.post("/api/comment", (req, res) => {
   const { id, comment } = req.body;
   const filter = jsonData.feed.filter((data) => data.id === id);
-  filter[0].comment = comment;
+  filter[0].comment.unshift(comment);
+  return res.send("succeess");
+});
+
+// 답글 업로드
+router.post("/api/reply", (req, res) => {
+  const { commentId, reply } = req.body;
+  const filter = jsonData.feed.filter((data) =>
+    data.comment.some((com) => com.commentId === commentId)
+  );
+  const filterComment = filter[0].comment.filter(
+    (com) => com.commentId === commentId
+  );
+  filterComment[0].reply.unshift(reply);
   return res.send("succeess");
 });
 
@@ -201,19 +214,6 @@ router.patch("/api/feed/:id", (req, res) => {
   return res.send("succeess");
 });
 
-// 답글 업로드
-router.patch("/api/reply", (req, res) => {
-  const { commentId, reply } = req.body;
-  const filter = jsonData.feed.filter((data) =>
-    data.comment.some((com) => com.commentId === commentId)
-  );
-  const filterComment = filter[0].comment.filter(
-    (com) => com.commentId === commentId
-  );
-  filterComment[0].reply.push(reply);
-  return res.send("succeess");
-});
-
 //// DELETE
 // 피드 삭제
 router.delete("/api/feed/:id", (req, res) => {
@@ -228,7 +228,9 @@ router.delete("/api/comment/:id", (req, res) => {
   const { id } = req.params;
   const { comment } = req.body;
   const filter = jsonData.feed.filter((data) => data.id === id);
-  filter[0].comment = comment;
+  filter[0].comment = filter[0].comment.filter(
+    (data) => data.commentId !== comment.commentId
+  );
   return res.send("succeess");
 });
 

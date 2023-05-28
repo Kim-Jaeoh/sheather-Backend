@@ -5,7 +5,8 @@ import feed from "./routes/feed.js";
 import info from "./routes/info.js";
 
 const corsOptions = {
-  origin: "https://sheather.netlify.app",
+  origin: "http://localhost:3000",
+  // origin: "https://sheather.netlify.app",
   optionsSuccessStatus: 200,
 };
 
