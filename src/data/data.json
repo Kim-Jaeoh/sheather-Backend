@@ -3,7 +3,7 @@
     {
       "id": "1",
       "url": ["/image/test1.jpeg"],
-      "imgAspect": "3/4",
+      "imgAspect": 132.8,
       "displayName": "ynxx.k",
       "email": "ynxx@test.com",
       "createdAt": 1675732653000,
@@ -30,7 +30,7 @@
     {
       "id": "2",
       "url": ["/image/test2.jpeg"],
-      "imgAspect": "1/1",
+      "imgAspect": 100,
       "displayName": "5dong2",
       "email": "5dong2@test.com",
       "createdAt": 1675696653000,
@@ -57,7 +57,7 @@
     {
       "id": "3",
       "url": ["/image/test3.jpeg"],
-      "imgAspect": "3/4",
+      "imgAspect": 132.8,
       "displayName": "d2_b_",
       "email": "d2b@test.com",
       "createdAt": 1675697998000,
@@ -84,7 +84,7 @@
     {
       "id": "4",
       "url": ["/image/test4.jpeg"],
-      "imgAspect": "3/4",
+      "imgAspect": 132.8,
       "displayName": "dam",
       "email": "dam@test.com",
       "createdAt": 1675703853000,
@@ -111,7 +111,7 @@
     {
       "id": "5",
       "url": ["/image/test5.jpeg"],
-      "imgAspect": "1/1",
+      "imgAspect": 100,
       "displayName": "hongjo_ov",
       "email": "hongjo@test.com",
       "createdAt": 1675747053000,
@@ -138,7 +138,7 @@
     {
       "id": "6",
       "url": ["/image/test6.jpeg"],
-      "imgAspect": "3/4",
+      "imgAspect": 132.8,
       "displayName": "jjaongs",
       "email": "jjaongs@test.com",
       "createdAt": 1675750653000,
