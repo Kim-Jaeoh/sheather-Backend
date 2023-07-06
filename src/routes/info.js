@@ -4,8 +4,6 @@ import admin from "firebase-admin";
 import dotenv from "dotenv"; // dotenv 모듈 import
 dotenv.config(); // .env 파일 로드
 
-// json 파일 읽기
-const jsonData = JSON.parse(fs.readFileSync("./src/data/data.json", "utf8"));
 const router = express.Router();
 
 admin.initializeApp({
